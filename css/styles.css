@@ -510,19 +510,19 @@ textarea {
 
 .form-footer {
   display: flex;
+  gap: 24px;
 }
 
 .form-subscribe-input {
   border: 1px solid #fff;
   background-color: transparent;
-  margin-right: 24px;
   border-radius: 4px;
-  min-width: 264px;
+  width: 264px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding-left: 16px;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -541,7 +541,6 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   min-width: 165px;
   height: 40px;
   font-family: inherit;
@@ -557,6 +556,7 @@ textarea {
 
 .icon-subscribe {
   fill: #fff;
+  margin-left: 16px;
 }
 
 .subscribe-btn:hover,
@@ -589,10 +589,13 @@ textarea {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 408px;
   height: 80%;
-  max-height: 594px;
+  min-height: 584px;
   overflow: auto;
   padding-top: 72px;
   padding-right: 24px;
@@ -602,10 +605,14 @@ textarea {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
   border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-close {
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   top: 24px;
   right: 24px;
   line-height: 0;
@@ -613,12 +620,13 @@ textarea {
   height: 24px;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 100%;
+  border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-close:hover,
@@ -679,6 +687,7 @@ textarea {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  outline: transparent;
   color: #2e2f42;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -692,6 +701,10 @@ textarea {
   fill: #4d5ae5;
 }
 
+.form-div-comment {
+  margin-bottom: 16px;
+}
+
 .form-input-textarea {
   width: 100%;
   height: 120px;
@@ -703,7 +716,8 @@ textarea {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: #2e2f42;
+  outline: transparent;
+  color: rgba(46, 47, 66, 0.4);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -739,6 +753,7 @@ textarea {
   background-color: #404bbf;
   border: 1px solid #404bbf;
   fill: #f4f4fd;
+  border: none;
 }
 
 ..form-checkbox:focus + .form-checkbox-label > .form-custom-checkbox {
@@ -756,7 +771,9 @@ textarea {
   cursor: pointer;
   fill: transparent;
   margin-right: 8px;
-  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-submit {
