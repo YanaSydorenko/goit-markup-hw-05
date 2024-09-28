@@ -757,7 +757,7 @@ textarea {
   border: none;
 }
 
-..form-checkbox:focus + .form-checkbox-label > .form-custom-checkbox {
+.form-checkbox:focus + .form-checkbox-label > .form-custom-checkbox {
   outline: 2px solid #404bbf;
 }
 
