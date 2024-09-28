@@ -179,7 +179,7 @@ textarea {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/background-image-header.jpg);
+    url(../images/background-image-header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -594,7 +594,6 @@ textarea {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 80%;
   min-height: 584px;
   overflow: auto;
   padding-top: 72px;
